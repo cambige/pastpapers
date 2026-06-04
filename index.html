@@ -3,39 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Past Papers Hub — Mr. Charles</title>
+  <title>Past Papers Hub</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <div class="header-inner">
-      <h1>📚 Past Papers Hub</h1>
-      <p class="subtitle">Free past papers for my students — download &amp; practise</p>
-    </div>
+    <h1>📚 Past Papers Hub</h1>
+    <p>Free past papers — click a subject to see papers</p>
   </header>
 
-  <!-- Subject Grid -->
   <main>
-    <section class="subjects-grid" id="subjectsContainer">
-      <!-- Cards injected by JS -->
-    </section>
+    <!-- Subject grid -->
+    <div id="subjects"></div>
 
-    <!-- Paper List View (hidden by default) -->
-    <section class="paper-view" id="paperView" style="display:none;">
-      <button class="back-btn" onclick="showSubjects()">← Back to Subjects</button>
-      <div id="paperHeader"></div>
-      <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search papers by year, paper number..." oninput="filterPapers()">
-      </div>
-      <div id="papersContainer" class="papers-list"></div>
-    </section>
+    <!-- Paper view -->
+    <div id="paperView" style="display:none">
+      <button onclick="backToSubjects()" id="backBtn">← Back</button>
+      <h2 id="paperTitle"></h2>
+      <input type="text" id="search" placeholder="Search..." oninput="doSearch()">
+      <div id="paperList"></div>
+    </div>
   </main>
 
-  <footer>
-    <p>For educational use only. © Mr. Charles</p>
-  </footer>
+  <footer>For educational use. © Mr. Charles</footer>
 
   <script src="js/papers.js"></script>
   <script src="js/main.js"></script>
