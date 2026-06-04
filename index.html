@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Papers Hub — Mr. Charles</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <h1>📚 Past Papers Hub</h1>
+      <p class="subtitle">Free past papers for my students — download &amp; practise</p>
+    </div>
+  </header>
+
+  <!-- Subject Grid -->
+  <main>
+    <section class="subjects-grid" id="subjectsContainer">
+      <!-- Cards injected by JS -->
+    </section>
+
+    <!-- Paper List View (hidden by default) -->
+    <section class="paper-view" id="paperView" style="display:none;">
+      <button class="back-btn" onclick="showSubjects()">← Back to Subjects</button>
+      <div id="paperHeader"></div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search papers by year, paper number..." oninput="filterPapers()">
+      </div>
+      <div id="papersContainer" class="papers-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>For educational use only. © Mr. Charles</p>
+  </footer>
+
+  <script src="js/papers.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Ignore local copies of PDFs if they're large
+# (we'll commit the actual papers)
+.DS_Store
+Thumbs.db
+*.log
